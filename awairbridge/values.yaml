@@ -1,0 +1,37 @@
+#usage:
+#helm upgrade awairbridge . --install -f myvalues.yaml --dry-run
+
+component: frontend
+application: awairbridge
+
+env:
+  #Any property can be overridden by adding it here with the same name - but the characters changed to upper case - and the dots changed to underscores.
+  #see https://github.com/wwadge/awair-bridge/src/main/resources/application.yml for list of settings
+  #see https://github.com/wwadge/awair-bridge for how to obtain the initial refresh token
+  AWAIR_TOKEN: ey...
+  PW_INITIALREFRESHTOKEN: ey...
+  PERSISTENCE_TYPE: local
+  PERSISTENCE_LOCALFILE: /data/token.json
+  #AWAIR_FETCHRATE: 900
+
+image:
+  repository: wwadge/awair-bridge
+  #tag: publish
+  pullPolicy: Always
+
+deployment:
+  replicaCount: 1
+  #nodeSelector:
+  #- ...
+  #affinity:
+  #- ...
+  #tolerations:
+  #- ...
+
+persistence:
+  #existingClaim: 
+  accessMode: ReadWriteOnce
+  size: 100Ki
+  ## Set to "-" to result in storageClassName: "", which disables dynamic provisioning.
+  ## If undefined or null (default), no storageClassName is set. K8s will use the default provisioner.
+  # storageClass: "-"

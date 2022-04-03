@@ -1,0 +1,6 @@
+#usage:
+#helm upgrade awairbridge ./awairbridge --install -f your-settings.yaml --dry-run
+
+env:
+  AWAIR_TOKEN: ey...
+  PW_INITIALREFRESHTOKEN: ey...
