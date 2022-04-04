@@ -9,7 +9,8 @@ env:
   #see https://github.com/wwadge/awair-bridge/src/main/resources/application.yml for list of settings
   #see https://github.com/wwadge/awair-bridge for how to obtain the initial refresh token
   AWAIR_TOKEN: ey...
-  PW_INITIALREFRESHTOKEN: ey...
+  PW_USERNAME: username@someone.moon
+  PW_PASSWORD: zzz...  
   PERSISTENCE_TYPE: local
   PERSISTENCE_LOCALFILE: /data/token.json
   #AWAIR_FETCHRATE: 900
