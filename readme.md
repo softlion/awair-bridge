@@ -1,3 +1,6 @@
+OBSOLETE: planetwatch killed their API endpoint
+
+
 1. Edit `your-settings.yaml` and set the credentials as  explained here https://github.com/wwadge/awair-bridge
 2. Install on a kubernetes cluster:
 
